@@ -1,0 +1,405 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+
+
+/*   ----- Variables  -----  */
+:root {
+  --dark-green:#21260D;
+  --light-green:#878674;  
+  --dark-brown:#594431;
+  --medium-brown:#836A54;
+  --light-brown:hsla(34, 27%, 65%, 0.69);
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {}. */
+  background-color:var(--light-green);
+  background-image:url(./images/wall-background.jpeg);
+  background-size:55%;
+  background-attachment: fixed;
+  background-position: top right;
+  background-repeat: repeat-y repeat-x;
+  color:var(--dark-brown);
+  font-family:"Red Hat Display", sans-serif;
+  font-weight:500;
+  margin:2%;
+  max-width:1500px;
+  padding:2%;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  margin:0;
+  background-color:var(--light-brown);
+  color:var(--dark-green);
+  font-size:60px;
+  padding:0.5px;
+}
+.title img{
+  max-width: 50%;
+  height: auto;
+  max-height: 100px;
+  padding-left: 2%;
+  padding-right: 2%;
+
+}
+main {
+  background-color:var(--light-green);
+  border:5px dashed var(--dark-green);
+}
+
+section {
+  background-color: var(--light-green);
+  margin: 2%;
+}
+article {
+  margin: 2%;
+  padding-bottom: 10px;
+}
+/*  #topic1 {}
+  #topic2 {}
+div {}
+aside {}*/
+footer {
+  background-color: var(--light-brown);
+  padding: 10px;
+  text-align:center;
+  font-size: 20px;
+  margin:0;
+}
+
+/* ----- Anchors ----- Text links */
+a {
+  font-family:"Red Hat Display";
+  font-weight: 900;
+  font-size: 25px;
+  }
+a:link {color:var(--dark-brown);}
+a:hover {color:var(--light-brown);}
+a:active {color:var(--light-brown);}
+a:visited {color:var(--dark-green);}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  text-align: center;
+  padding-bottom: 20px;
+  background-color: var(--light-brown);
+  flex-flow:row wrap;
+}
+nav a {
+  background-color: var(--light-brown);
+  display:inline-block;
+  margin-right:10px;
+  padding: 5px;
+  border:var(--dark-brown);
+  border: 3px solid var(--dark-brown);
+  font-size:23px;
+  text-decoration:none;
+}
+nav a:hover {
+  background-color: var(--dark-brown);
+  color:var(--light-brown);
+}
+.local{
+  background-color:var(--dark-green);
+  padding:10px;
+  margin: 50px 0px;
+  font-size: 10px;
+  border:3px double var(--light-green);
+  border-radius: 10px;
+  display:flex;
+  position:sticky;
+  top:0;
+}
+/*  -----  Typography  ----- */
+p,br, ol, ul, dl, li, dd {
+  font-family:"Red Hat Display";
+  font-size:18px;}
+dt {font-family:"Red Hat Display";
+  font-size:20px;}
+
+h2, h3, h4, h5 {font-family: 'Kaushan Script';} 
+h1 {font-family: "Great Vibes";
+    text-align: center;}
+h2 {font-size:40px;
+    text-align:center;}
+h3, h4, h5, h6 {font-size:30px;}
+
+.add{
+  font-size:12px;
+  text-align:center;
+  padding:0;
+  margin:0;
+}
+
+/*abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}*/
+strong {font-family: "Red Hat Display";
+        font-weight: 900;}
+
+.desc{
+  text-align: center;
+  padding-bottom: 5px;
+}
+/*sub {}
+sup {}
+time {}*/
+
+/*  ----- Coding or instructional typography ----- */
+/*pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}*/
+
+/*  ----- Table ----- */
+table {
+  background-color: var(--light-brown);
+  border:3px dotted var(--dark-brown);
+  margin-bottom:15px;
+  padding:0;
+  width:100%;
+
+}
+caption {
+  font-family: inherit;
+  color:var(--dark-brown);
+  padding:1%;
+  text-align: left;
+}
+thead,tfoot,tbody{
+  font-family: inherit;
+  font-weight: bolder;
+  color:var(--dark-brown);
+  padding:2px;
+  padding-top:2px;
+  margin:0;
+}
+tr {
+  padding:1px;
+  margin:0;
+}
+  tr:nth-child(even) {background-color:var(--medium-brown);}
+th {
+  padding:1px;
+  margin:0;
+  background-color:var(--medium-brown);
+  color:var(--dark-green);
+}
+td {
+  font-weight:lighter;
+  color:var(--dark-brown);
+  padding:10px;
+  margin:0;
+  position:center;
+}
+/*  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}*/
+
+
+/*  ----- Form ----- */
+form {
+  margin:1%;
+  padding:3px;
+}
+fieldset {
+  border:3px solid var(--dark-brown);
+  margin:0;
+  padding:2%;
+  width:95%;
+}
+  legend {
+    margin:0;
+    padding-right:2%;
+  }
+label {
+  display:block;
+  padding-top:5px;
+  margin:0;
+  padding:0;
+}
+button {
+  background-color: var(--light-brown);
+  border:3px solid var(--dark-brown);
+  font-family:inherit;
+  padding:9px;
+  font-size:20px;
+  color:var(--dark-brown);
+  width:95px;
+}
+button:hover{
+  background-color: var(--dark-brown);
+  color:var(--light-brown);
+}
+input, select, textarea {
+  font-family:inherit;
+  font-size:14px;
+  padding:5px;
+  background-color:var(--light-brown);
+}
+
+  /*optgroup {}*/
+  option {
+    background-color: var(--light-brown);
+    font-family: inherit;
+    font-size:14px;
+    color: var(--dark-green);
+  }
+
+input[type="text"],
+input[type="email"],
+input[type="number"], 
+input[type="date"],
+textarea {
+  width:100%;
+  color:var(--dark-green);
+}
+textarea{height:90px;}
+
+:focus{
+  background-color: var(--medium-brown);
+  color: var(--dark-brown);
+
+}
+
+*::placeholder{
+  color: var(--medium-brown);
+
+}
+
+*:required{
+  border:2px var(--dark-green);
+}
+
+label.required:after{
+  content:"*";
+  color:red;
+}
+/*output {}
+meter {}
+progress {}*/
+
+.orderForms{
+  display:inline-block;
+}
+
+
+/* ----- Media ----- */
+figure {
+    padding:5px;
+ /*   border: 3px solid var(--dark-brown); */
+    margin:10px;
+  }
+  figcaption {
+    text-align: center;
+    max-width: 800px;
+    font-size:20px;
+    display:block;
+    margin-left:1%;
+    margin-right:3%;
+    width:100%;
+    margin-bottom:5%;
+    padding-top:15px;
+  }
+  figure img {
+    align-content: center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+  }
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    max-width: 200px;
+    gap:1px;
+    overflow:hidden;
+    position:center;
+    margin:auto;
+    padding:0;
+}
+.gallery img{
+    width:50%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    flex:1;
+    padding: 10px;
+    margin:0;
+    align-content: center;
+}
+.gallery img:hover{
+    transform: scale(1.1);
+}
+
+.favicon img{
+  width: 8%;
+  height: auto;
+  position: center;
+}
+
+/*svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}*/
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+/*
+.gallery {}
+
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+*/
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}

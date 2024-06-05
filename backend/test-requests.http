@@ -1,0 +1,88 @@
+### CREATE five documents.
+POST http://localhost:3012/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "dish": "Beef Bugolgi",
+    "servings": 6,
+    "origin": "Korea",
+    "date": "2-25-24"
+}
+
+
+### CREATE 2
+POST http://localhost:3012/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "dish": "Spam Musubi",
+    "servings": 7,
+    "origin": "Hawaii",
+    "date": "3-2-24"
+}
+
+### CREATE 3
+POST http://localhost:3012/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "dish": "Kimchijjigae",
+    "servings": 5,
+    "origin": "Korea",
+    "date": "2-12-24"
+}
+
+### CREATE 4
+POST http://localhost:3012/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "dish": "Tofu Katsu Curry",
+    "servings": 3,
+    "origin": "Japan",
+    "date": "1-21-24"
+}
+
+### CREATE 5
+POST http://localhost:3012/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "dish": "Chicken Alfredo",
+    "servings": 4,
+    "origin": "Italy",
+    "date": "1-28-24"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3012/recipes HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3012/recipes/65e03f08fd6ca1a06ae7eb53 HTTP/1.1
+
+
+### UPDATE one document's servings, by ID.
+### Replace the ID in the following request with one that exists
+### and update the servings:
+PUT http://localhost:3012/recipes/65e03ebffd6ca1a06ae7eb4f HTTP/1.1
+content-type: application/json
+
+{
+    "dish": "Beef Bugolgi",
+    "servings": 7,
+    "origin": "Korea",
+    "date": "2-25-24"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3012/recipes/65e03ebffd6ca1a06ae7eb4f HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3012/recipes HTTP/1.1
+

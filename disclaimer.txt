@@ -1,0 +1,2 @@
+i've been having issues with vs code and have to take 2 hours intervals inbetween flip session automatic sign outs.
+the backend is having issues recieving and sending data to the frontend.
